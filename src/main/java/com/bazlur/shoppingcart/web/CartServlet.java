@@ -29,13 +29,11 @@ public class CartServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req,
                           HttpServletResponse res)
         throws ServletException, IOException{
-
         var productId = req.getParameter("productId");
         var action = req.getParameter("action");
         var cart = getCart(req);
 
         if(StringUtil.isNotEmpty(action))  {
-            System.out.println("util");
             processCart(productId, action, cart);
             res.sendRedirect("/checkout");
             return;
