@@ -12,6 +12,13 @@
     <div class="container">
         <div class="jumbotron">
             <div class="row">
+                <c:if test="${message != null}">
+                    <div class="alert alert-success">
+                        ${message}
+                    </div>
+                </c:if>
+            </div>
+            <div class="row">
                 <div class="col-6">
                     <c:if test="${sec:isAuthenticated(pageContext.request)}">
                         <h1>Hello <c:out

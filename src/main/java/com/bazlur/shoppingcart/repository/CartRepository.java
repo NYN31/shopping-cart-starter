@@ -10,6 +10,8 @@ public class CartRepository {
     private static final Map<User, Set<Cart>> CARTS
             = new ConcurrentHashMap<>();
 
+    private OrderRepository orderRepository = new OrderRepository();
+
     public Optional<Cart> findByUser(User currentUser){
         Set<Cart> carts = CARTS.get(currentUser);
         if(carts != null && !carts.isEmpty()) {

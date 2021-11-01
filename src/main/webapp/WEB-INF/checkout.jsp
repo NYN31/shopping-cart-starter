@@ -69,7 +69,7 @@
                         </a>
                     </td>
                     <td>
-                        <a href="<c:url value="#"/>"
+                        <a href="<c:url value="/order"/>"
                            class="btn btn-outline-success text-right">
                             Proceed to Checkout
                         </a>
